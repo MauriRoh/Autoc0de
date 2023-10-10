@@ -136,7 +136,8 @@
                         <!--suppress UnresolvedMavenProperty -->
                         <executionMode>${mode}</executionMode>
                         <browser>Chromium</browser>
-                        <applicationUrl>https://underc0de.org/</applicationUrl>
+<!--                        <applicationUrl>https://underc0de.org/</applicationUrl>-->
+                        <applicationUrl>https://yltrue.com/automation/</applicationUrl>
                         <remoteUrl/>
                     </systemPropertyVariables>
                     <testFailureIgnore>true</testFailureIgnore>

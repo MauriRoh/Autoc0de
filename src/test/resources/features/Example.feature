@@ -1,6 +1,6 @@
 Feature: Login in underc0de forum
 
-  @ExampleTag
+  @Test
   Scenario Outline: User login in the Underc0de forum
     Given the user is on the home screen of Underc0de.org
     When the user click the "FORO" button
