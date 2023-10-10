@@ -20,6 +20,12 @@ public class TestPage extends MasterPage {
         auto_setClickElement(LOGIN_BUTTON_XPATH);
     }
 
+    public void ClickTheD01Button (String button){
+        auto_setClickElement(button);
+    }
+
+
+
 //    public void verifyLogin() {
 //        auto_setClickElement(USER_LOGIN_IMG_XPATH);
 //        Assert.assertTrue("Error at login - Invalid username or passwor", auto_getElementText(USER_LOGIN_LBL_XPATH).toLowerCase().contains("autoc0de"));
