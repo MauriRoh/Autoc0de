@@ -11,21 +11,21 @@ public class loginSteps {
      ** PAGE INSTANCE **
      */
 
-    TestPage TestPage = new TestPage();
+    TestPage testPage = new TestPage();
 
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
-        TestPage.navigateToMainURL();
+        testPage.navigateToMainURL();
     }
 
     @When("^the user enters valid username: \"(.*)\" and password: \"(.*)\"$")
     public void theUserEnterUsernameAndPass(String user, String pass){
-        TestPage.completeLoginData(user, pass);
+        testPage.completeLoginData(user, pass);
     }
 
     @Then("^the user click the \"LOGIN\" button on the form$")
     public void theUserClickTheLoginButtonOnTheForm() {
-        TestPage.ClickTheLoginButtonOnTheForm();
+        testPage.ClickTheLoginButtonOnTheForm();
     }
 //    @And("^the user click the \"LOGIN\" button on the form$")
 //    public void theUserClickTheLoginButtonOnTheForm() {

@@ -1,14 +1,34 @@
-Feature: Login in underc0de forum
+@Test
+Feature: Verify actions on Main Page
 
-  @Test
-  Scenario Outline: User login in the Underc0de forum
-    Given the user is on the home screen of Underc0de.org
-    When the user click the "FORO" button
-    And the user click the "INGRESAR" button of the forum
-    And the user complete te user information. Usuario: "<user>" Contraseña: "<pass>"
-    And the user click the "INGRESAR" button of the forum modal
-    Then the user verifies that they are logged in.
+  Background: Successful login with valid credentials and clicking login button
+    Given the user is on the login page
+    When the user enters valid username: "username" and password: "password"
+    Then the user click the "LOGIN" button on the form
+
+  Scenario Buttons change from disable to enable when click on the other button D0n!
+    Given the user click the "D01" button
+    When the DO2 button change from disable to enable
+    And the user clicking the "D02" button
+    Then the DO1 button change from disable to enable
+
+
+  Scenario Outline: Change font size
+    Given the user clicks the "<up>" button four times
+    And the font increases in size
+    And the user clicks the down "<down>" button four times
+    Then the font decreases in size
+
     Examples:
-      | user         | pass          |
-      | autoc0de     | Underc0de     |
-      | autoc0deFail | undercodefail |
+      | up | down |
+      | 4  | 4    |
+
+
+  Scenario Outline: Enter a color and verify that the background color changes
+    Given the user enters a color into the input "<color>"
+    And the user click the "SET BACKGROUND COLOR" button
+    Then the form background color changes
+
+    Examples:
+      | color |
+      | blue  |
