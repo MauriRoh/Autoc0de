@@ -1,7 +1,6 @@
 package steps;
 
 import io.cucumber.java.en.*;
-import io.cucumber.java.en_scouse.An;
 import pages.ExamplePage;
 
 public class ExampleSteps {
@@ -11,7 +10,29 @@ public class ExampleSteps {
 
     ExamplePage examplePage = new ExamplePage();
 
-   @Given("^the user click the \"(.*)\" button$")
+//    @Given("the user is on the home screen of Underc0de.org")
+//    public void theUserIsOnTheHomeScreenOfUndercDeOrg() {
+//        examplePage.navigateToMainURL();
+//        examplePage.verifyHomeTitle();
+//    }
+
+    @Given("the user is on the login page")
+    public void theUserIsOnTheLoginPage() {
+        examplePage.navigateToMainURL();
+    }
+
+    @And("^the user enters valid username \"(.*)\" password \"(.*)\"$")
+    public void theUserEnterUsernameAndPass(String user, String pass){
+        examplePage.completeLoginData(user, pass);
+    }
+
+    @And("^the user click the \"LOGIN\" button on the form$")
+    public void theUserClickTheLoginButtonOnTheForm() {
+        examplePage.ClickTheLoginButtonOnTheForm();
+    }
+
+//    @Given("^the user click the \"(.*)\" button$")
+    @Given("the user click the D01 button")
     public void theUserClickTheD01Button() {
         examplePage.ClickTheD01Button();
     }
@@ -21,7 +42,8 @@ public class ExampleSteps {
         examplePage.Button02ChangeFromDisableToEnable();
     }
 
-    @And("^the user clicking the \"(.*)\" button$")
+//    @And("^the user clicking the \"(.*)\" button$")
+    @And("the user clicking the D02 button")
     public void theUserClickTheD02Button() {
         examplePage.ClickTheD02Button();
     }
@@ -65,5 +87,34 @@ public class ExampleSteps {
     public void theFormBackgroundColorChanges() {
         examplePage.BackgroundColorChanges();
     }
+
+
+
+
+
+
+////    @And("^the user click the \"(.*)\" button$")
+////    public void theUserClickTheButton(String button) {
+////        examplePage.clickButtonSwitch(button);
+////    }
+//    @And("^the user click the \"INGRESAR\" button of the forum$")
+//    public void theUserClickTheINGRESARButtonOfTheForum() {
+//        examplePage.clickIngresarButtonForum();
+//    }
+//
+//    @And("^the user click the \"INGRESAR\" button of the forum modal$")
+//    public void theUserClickTheINGRESARButtonOfTheForumModal() {
+//        examplePage.clickIngresarButtonForumModal();
+//    }
+////
+//    @And("^the user complete te user information. Usuario: \"(.*)\" Contraseña: \"(.*)\"$")
+//    public void theUserCompleteTeUserInformationUsuarioUserContraseñaPass(String user, String pass) {
+//        examplePage.completeLoginData(user, pass);
+//    }
+//
+////    @Then("the user verifies that they are logged in.")
+////    public void theUserVerifiesThatTheyAreLoggedIn() {
+////        examplePage.verifyLogin();
+////    }
 
 }

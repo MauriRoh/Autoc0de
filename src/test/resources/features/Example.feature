@@ -1,17 +1,16 @@
-@Test
+@ExampleTag
 Feature: Verify actions on Main Page
 
   Background: Successful login with valid credentials and clicking login button
     Given the user is on the login page
-    When the user enters valid username: "username" and password: "password"
+    When the user enters valid username "admin" password "admin"
     Then the user click the "LOGIN" button on the form
 
-  Scenario Buttons change from disable to enable when click on the other button D0n!
-    Given the user click the "D01" button
+  Scenario: Buttons change from disable to enable when click on the other button D0n
+    Given the user click the D01 button
     When the DO2 button change from disable to enable
-    And the user clicking the "D02" button
+    And the user clicking the D02 button
     Then the DO1 button change from disable to enable
-
 
   Scenario Outline: Change font size
     Given the user clicks the "<up>" button four times
@@ -23,12 +22,7 @@ Feature: Verify actions on Main Page
       | up | down |
       | 4  | 4    |
 
-
-  Scenario Outline: Enter a color and verify that the background color changes
-    Given the user enters a color into the input "<color>"
+  Scenario: Enter a color and verify that the background color changes
+    Given the user enters a color into the input "blue"
     And the user click the "SET BACKGROUND COLOR" button
     Then the form background color changes
-
-    Examples:
-      | color |
-      | blue  |

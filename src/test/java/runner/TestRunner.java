@@ -15,9 +15,8 @@ import io.cucumber.junit.CucumberOptions;
         },
         features = "src/test/resources/features/",
         glue = {"steps","runner"},
-        tags =  "@Test"
-//        tags =  "@ExampleTag"
-
+        tags =  "@ExampleTag"
+        
 )
 public class TestRunner {
 
